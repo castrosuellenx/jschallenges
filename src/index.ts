@@ -1,6 +1,7 @@
 import { awardEmployeeBonuses } from "./employeesBonusAward";
 import { emojifyPhrase } from "./emojify";
 import { isAnagram } from "./isItAnAnagram";
+import { reverseString, reverseStringsInArray } from "./reverseMessages";
 
 // FizzBuzz lookalike
 awardEmployeeBonuses();
@@ -13,3 +14,14 @@ console.log(emojifyPhrase("I :heart: my :elephant:"));
 console.log(isAnagram("allergy", "gallery"));
 console.log(isAnagram("treasure", "measure"));
 console.log(isAnagram("rainbow", "crossbow"));
+
+// Reverse Alien messages
+const title = ":htraE no od ot ffutS";
+const messages = [
+  "maerc eci yrT",
+  "rewoT leffiE tisiV",
+  "noom eht ot snamuh etacoleR",
+  "egrahc ni stac tuP",
+];
+console.log(reverseString(title));
+console.log(reverseStringsInArray(messages));
