@@ -1,5 +1,4 @@
-function sum(a: number, b: number) {
-  return a + b;
-}
+import {awardEmployeeBonuses} from './employeesBonusAward';
 
-console.log("SUM: 1 + 1:", sum(1, 1));
+// FizzBuzz lookalike
+awardEmployeeBonuses();
