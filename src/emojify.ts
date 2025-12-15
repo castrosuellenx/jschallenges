@@ -11,13 +11,13 @@ For example, typing :smile: will replace that text with 😊
 
 */
 
-const emojis = {
-  smile: '😊',
-  angry: '😠',
-  party: '🎉',
-  heart: '💜',
-  cat: '🐱',
-  dog: '🐕',
+const emojis: Record<string, string | undefined> = {
+  smile: "😊",
+  angry: "😠",
+  party: "🎉",
+  heart: "💜",
+  cat: "🐱",
+  dog: "🐕",
 };
 
 /* 1. Write a function that checks if a lowercase word starts and 
@@ -36,8 +36,20 @@ Example input: "elephant"
 Example output: "elephant"
 */
 
-function emojifyWord(word: string) {
-  return;
+function emojifyWord(word: string): string {
+  // Isn't lowercase
+  if (word !== word.toLowerCase()) {
+    return word;
+  }
+
+  // Doesn't start or end with colons
+  if (!word.startsWith(":") || !word.endsWith(":")) {
+    return word;
+  }
+
+  const wordWithoutColons = word.slice(1, -1);
+
+  return emojis[wordWithoutColons] || wordWithoutColons;
 }
 
 /* 2. Write a function to find any emoji shortcodes in a phrase.
@@ -52,13 +64,6 @@ Example input: "I :heart: my elephant"
 Example output: "I 💜 my elephant"
 */
 
-function emojifyPhrase(phrase: string) {
-  return;
+export function emojifyPhrase(phrase: string) {
+  return phrase.split(" ").map(emojifyWord).join(" ");
 }
-
-// console.log(emojifyWord(":heart:"));
-// console.log(emojifyWord(":flower:"));
-// console.log(emojifyWord("elephant"));
-
-// console.log(emojifyPhrase("I :heart: my :cat:"));
-// console.log(emojifyPhrase("I :heart: my :elephant:"));
