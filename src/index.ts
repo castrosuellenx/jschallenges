@@ -1,7 +1,12 @@
 import { awardEmployeeBonuses } from "./employeesBonusAward";
 import { emojifyPhrase } from "./emojify";
 import { isAnagram } from "./isItAnAnagram";
-import { reverseString, reverseStringsInArray } from "./reverseMessages";
+import {
+  reverseString,
+  reverseStringsInArray,
+  reverseStringV2,
+  reverseStringsInArrayV2,
+} from "./reverseMessages";
 
 // FizzBuzz lookalike
 awardEmployeeBonuses();
@@ -23,5 +28,11 @@ const messages = [
   "noom eht ot snamuh etacoleR",
   "egrahc ni stac tuP",
 ];
+
+// V1
 console.log(reverseString(title));
 console.log(reverseStringsInArray(messages));
+
+// V2
+console.log(reverseStringV2(title));
+console.log(reverseStringsInArrayV2(messages));

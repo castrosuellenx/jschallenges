@@ -24,16 +24,8 @@ Example output: Welcome to earth!
 */
 
 export function reverseString(sentence: string) {
-  const words = sentence.split(" ");
-
-  // Reverse each word
-  const reversedWords = words.map((word) => {
-    const letters = word.split("");
-    return letters.reverse().join("");
-  });
-
-  // Join the sentence back and reverse it
-  return reversedWords.reverse().join(" ");
+  const letters = sentence.split("");
+  return letters.reverse().join("");
 }
 
 /*
@@ -58,26 +50,17 @@ function reverse<T>(initialArray: Array<T>): Array<T> {
   const reversedArray = [];
 
   // Use indexes as we lower than
-  for(let index = initialArray.length - 1; index >= 0; index--) {
-    reversedArray.push(initialArray[index])
+  for (let index = initialArray.length - 1; index >= 0; index--) {
+    reversedArray.push(initialArray[index]);
   }
 
   return reversedArray;
 }
 
 export function reverseStringV2(sentence: string) {
-  const words = sentence.split(" ");
-
-  // Reverse each word
-  const reversedWords = words.map((word) => {
-    const letters = word.split("");
-    const reversedLetters = reverse(letters);
-    return reversedLetters.join("");
-  });
-
-  // Join the sentence back and reverse it
-  const reversedSentence = reverse(reversedWords);
-  return reversedSentence.join(" ");
+  const letters = sentence.split("");
+  const reversedLetters = reverse(letters);
+  return reversedLetters.join("");
 }
 
 export function reverseStringsInArrayV2(arrayOfSentences: string[]) {
