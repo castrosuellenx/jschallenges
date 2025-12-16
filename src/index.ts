@@ -7,6 +7,7 @@ import {
   reverseStringV2,
   reverseStringsInArrayV2,
 } from "./reverseMessages";
+import { removeDupeChars } from "./nonDuplicatedCharacters";
 
 // FizzBuzz lookalike
 awardEmployeeBonuses();
@@ -36,3 +37,7 @@ console.log(reverseStringsInArray(messages));
 // V2
 console.log(reverseStringV2(title));
 console.log(reverseStringsInArrayV2(messages));
+
+// Remove duplicated characters from Grandpa's password
+const grandpasPassword = "9338dsabbbadjdjdj2sdfdfdf282ff8fdsd888ss8cfgfg332q23";
+console.log(removeDupeChars(grandpasPassword));
