@@ -8,6 +8,7 @@ import {
   reverseStringsInArrayV2,
 } from "./reverseMessages";
 import { removeDupeChars } from "./nonDuplicatedCharacters";
+import { countNumberDigits } from "./countDigitsInNumber";
 
 // FizzBuzz lookalike
 awardEmployeeBonuses();
@@ -41,3 +42,9 @@ console.log(reverseStringsInArrayV2(messages));
 // Remove duplicated characters from Grandpa's password
 const grandpasPassword = "9338dsabbbadjdjdj2sdfdfdf282ff8fdsd888ss8cfgfg332q23";
 console.log(removeDupeChars(grandpasPassword));
+
+// Count digits of a number
+console.log(countNumberDigits(0));
+console.log(countNumberDigits(9889778));
+console.log(countNumberDigits(2025));
+console.log(countNumberDigits(-123));
