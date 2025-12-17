@@ -9,6 +9,8 @@ import {
 } from "./reverseMessages";
 import { removeDupeChars } from "./nonDuplicatedCharacters";
 import { countNumberDigits } from "./countDigitsInNumber";
+import { podcasts } from "./data/podcasts";
+import { createDescriptionsFor } from "./challenges/generatePodcastDescriptions";
 
 // FizzBuzz lookalike
 awardEmployeeBonuses();
@@ -48,3 +50,6 @@ console.log(countNumberDigits(0));
 console.log(countNumberDigits(9889778));
 console.log(countNumberDigits(2025));
 console.log(countNumberDigits(-123));
+
+// Generate descriptions for podcasts
+console.log(createDescriptionsFor(podcasts));
