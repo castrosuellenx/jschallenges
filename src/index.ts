@@ -1,16 +1,17 @@
-import { awardEmployeeBonuses } from "./employeesBonusAward";
-import { emojifyPhrase } from "./emojify";
-import { isAnagram } from "./isItAnAnagram";
+import { awardEmployeeBonuses } from "./challenges/employeesBonusAward";
+import { emojifyPhrase } from "./challenges/emojify";
+import { isAnagram } from "./challenges/isItAnAnagram";
 import {
   reverseString,
   reverseStringsInArray,
   reverseStringV2,
   reverseStringsInArrayV2,
-} from "./reverseMessages";
-import { removeDupeChars } from "./nonDuplicatedCharacters";
-import { countNumberDigits } from "./countDigitsInNumber";
-import { podcasts } from "./data/podcasts";
+} from "./challenges/reverseMessages";
+import { removeDupeChars } from "./challenges/nonDuplicatedCharacters";
+import { countNumberDigits } from "./challenges/countDigitsInNumber";
 import { createDescriptionsFor } from "./challenges/generatePodcastDescriptions";
+
+import { podcasts } from "./data/podcasts";
 
 // FizzBuzz lookalike
 awardEmployeeBonuses();
