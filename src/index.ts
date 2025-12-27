@@ -10,6 +10,7 @@ import {
 import { removeDupeChars } from "./challenges/nonDuplicatedCharacters";
 import { countNumberDigits } from "./challenges/countDigitsInNumber";
 import { createDescriptionsFor } from "./challenges/generatePodcastDescriptions";
+import { findTheWinner } from "./challenges/findItemWithMostVotes";
 
 import { podcasts } from "./data/podcasts";
 
@@ -54,3 +55,16 @@ console.log(countNumberDigits(-123));
 
 // Generate descriptions for podcasts
 console.log(createDescriptionsFor(podcasts));
+
+// Find item with most votes
+const catsVsDogs = { "🐈 cats": 19, "🐕 dogs": 17 };
+const gameNightFood = {
+  "🍕 pizza": 3,
+  "🌮 tacos": 10,
+  "🥗 salads": 7,
+  "🍝 pasta": 5,
+};
+
+console.log(findTheWinner(gameNightFood));
+console.log(findTheWinner(catsVsDogs));
+console.log(findTheWinner({}));
